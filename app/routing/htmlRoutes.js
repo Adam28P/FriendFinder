@@ -1,2 +1,9 @@
-exports.surveyRoute = '/app/public/survey.html';
-exports.homeRoute = '/app/public/home.html';
+module.exports = htmlRouting = function (app, path) {
+    app.get("/survey", function (req, res) {
+        res.sendFile(path.join(__dirname, "..", "public", "survey.html"));
+    });
+
+    app.get("*", function (req, res) {
+        res.sendFile(path.join(__dirname, "..", "public", "home.html"));
+    });
+}
