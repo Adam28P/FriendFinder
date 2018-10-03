@@ -4,8 +4,8 @@ var app = express();
 var bodyParser = require("body-parser");
 var path = require("path");
 var htmlRoutes = require("./app/routing/htmlRoutes");
-var htmlRoutes = require(path.join(__dirname,  "routing", "htmlRoutes.js"));
-var apiRoutes = require(path.join(__dirname,  "routing", "apiRoutes.js"));
+var htmlRoutes = require(path.join(__dirname,  "app", "routing", "htmlRoutes.js"));
+var apiRoutes = require(path.join(__dirname,  "app", "routing", "apiRoutes.js"));
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: true }));
